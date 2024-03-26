@@ -1,13 +1,13 @@
-﻿#include<stdio.h>
+﻿#include <stdio.h>
 void main() {
 	int i;
-	int score[3] = { 91,86,97 };
-	char grade[3] = { 'A','B','A' };
-	printf(" \n *** 학년별 취득 학점 ***\n\n");
+	 const char *ptrArray[4] = { {"korea"},{"seoul"},{"Mapo"},{"152번지 2/3"} };
+	for (i = 0; i < 4; i++)
+		printf("\n%s", ptrArray[i]);
 
-	for (i = 0; i < 3; i++) {
-		printf("%3d학년 :  총점 = %d, 등급 = %c\n", i + 1, score[i], grade[i]);
-	}
+	ptrArray[2] = "Jongno";
+	printf("\n\n");
+	for (i = 0; i < 4; i++)
+	printf("\n %s", ptrArray[i]);
 	getchar();
-
-}
+	}
